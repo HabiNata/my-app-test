@@ -67,7 +67,7 @@ class RegisterUserTest extends TestCase
     {
         // Submit form untuk register dengan field 'name' 260 karakter.
         $response = $this->post('/register', [
-            'name'                  => str_repeat('John Thor ', 26),
+            'name'                  => str_repeat('John Thor Nom', 26),
             'email'                 => 'username@example.net',
             'password'              => 'password',
             'password_confirmation' => 'password',
@@ -82,7 +82,7 @@ class RegisterUserTest extends TestCase
     {
         // Submit form untuk register dengan field 'email' kosong.
         $response = $this->post('/register', [
-            'name'                  => 'John Thor',
+            'name'                  => 'John Thor Nom',
             'email'                 => '',
             'password'              => 'password',
             'password_confirmation' => 'password',
